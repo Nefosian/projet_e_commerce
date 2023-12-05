@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Ultra&display=swap');
+
+body {
+    background-color:var(--color_image_setup);
+    --bar_titre:rgb(11, 3, 19);
+    --color_shadow: rgb(87, 17, 217);
+    --color: rgb(59, 34, 130);
+    --navbar_color: rgb(164, 69, 196);
+    --color_image_setup: rgb(19, 7, 30);
+    --azure: rgb(240, 255, 255);
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue';
+}
+
+a{
+    text-decoration: none;
+    color: var(--azure);
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--navbar_color);
+}
+
+nav{
+    background-color: var(--color);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px; 
+    padding: 23px;
+}
+
+nav a{
+    margin: 8px;
+    text-align: center;
+}
+
+nav div{
+    padding-top: 20px;
+}
+
+
+
+nav img{
+    width:50px
+}
+
+/*page produit*/
+
+.h1{
+    background-color:var(--bar_titre);
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    color: var(--azure);
+    justify-content: center;
+    display: flex;
+}
+
+
+h1{
+    padding: 15px;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+
+.category {
+    flex: 200px;
+    padding: 20px;
+    background-color: var(--color); 
+    text-align: center;
+    order: 2;
+}
+
+.category p{
+    color: var(--azure);
+    font-size: 17px;
+    padding: 30px;
+}
+
+.category h2 {
+    color: var(--azure); 
+    background-color: var(--bar_titre);
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.category h3{
+    background-color: var(--bar_titre);
+    border-radius: 500px;
+    color: var(--azure);
+    font-size: 23px;
+    padding:5px;
+    margin: 0;
+    
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.category li {
+    margin-bottom: 40px;
+    color: var(--azure);
+    list-style: circle;
+}
+
+.images {
+    flex:3 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.box_prix {
+    border-radius: 10px;
+    background-color: var(--bar_titre);
+    padding: 25px;
+}
+
+.stock p{
+    color: green;
+    padding-bottom: 10px;
+}
+
+.prix p{
+    font-size: 25px;
+    padding: 0;
+ }
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--color);
+    color: var(--azure);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+.button:hover{
+    background-color: var(--navbar_color);
+    color : var(--bar_titre);
+}
+
+
+.cote_container{
+    display: flex ;
+    justify-content: space-between;
+}
+
+.cote{
+    flex:1;
+    border-right: 1px solid var(--bar_titre); 
+    padding: 0 20px; 
+}
+
+.cote:last-child {
+    border-right: none; 
+}
+
+@media (max-width: 1250px) {
+    .cote_container {
+        display: block;
+    }
+    .cote{
+        border-right: none;
+    }
+}
+
+
+/*box produits recommandés*/
+
+.box-container {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 100px;
+}
+
+.box {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color_shadow);
+    cursor: pointer;
+    transition: all 0.6s ease;
+    opacity: 0.8;
+    position: relative;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.box:hover img{
+    transition: all 0.6s ease;
+    transform: scale(1.005);
+    opacity: 1;
+    box-shadow: 0 0 50px var(--color_shadow);
+}
+
+.box h3{
+    position: absolute;
+    bottom: 0; 
+    width: 95%; 
+    background-color: var(--color_image_setup);
+    opacity: 0.7;
+    padding: 10px; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    text-align: center;
+    color: var(--azure);
+    z-index: 2;
+    margin: 0;
+}
+
+.box:hover h3{
+    color: var(--navbar_color);
+    transition: all 0.3s ease;
+    transform: scale(1.005);
+    opacity: 0.95;
+}
+
+.titre_produits_associes{
+    text-align: center;
+    color: var(--azure);
+    padding-top: 10px;
+}
+
+
+/*page de confirmation*/
+.top{
+    background-color: var(--color);
+    padding: 1px;
+    text-align: center;
+    color:var(--azure);
+    font-size: 24px;
+}
+
+.confirmation-container {
+    text-align: center;
+    margin: 50px;
+}
+
+.confirmation-message {
+    color: var(--azure);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.order-details {
+    border: 2px solid var(--color_shadow);
+    padding: 20px;
+    display: inline-block;
+    margin-bottom: 20px; 
+    color: var(--azure);
+}
+
+.bouton_achat {
+    background-color: var(--color);
+    color: var(--azure);
+    padding: 10px 20px;
+    display: block;
+    font-size: 18px;
+}
+
+.suivi a{
+    border-radius: 50px;
+    color: var(--color_shadow);
+}
+
+/*footer*/
+
+footer {
+    text-align: center;
+    background-color:var(--bar_titre);
+    color: var(--azure);
+    padding: 1px;
+}
+.social-icons img {
+    width: 40px; 
+    height: 40px;
+    margin: 10px;
+}
